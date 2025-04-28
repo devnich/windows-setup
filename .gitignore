@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+
+# Jupyter environmental variables
+scripts/.ipynb_checkpoints/*
+
+# Generated and reference documentation
+docs/*
+
+# Generated data
+data/processed/*
+
+# Generated images
+*.png
+
+# Archives
+*.zip
