@@ -64,17 +64,12 @@ Where to find the most recent version of every application.
 ### Anaconda Python distribution
 
 1.  Uninstall previous version
-
 2.  Delete Start Menu items for previous version
-
 3.  Install
-
 4.  Open Anaconda Powershell Prompt and run the following command:
-
     ``` bash
     conda create -n lab --clone base
     ```
-
 5.  When the process is complete (it will take several minutes), you may close Powershell
 
 ### DB Browser for SQLite
@@ -101,26 +96,20 @@ Where to find the most recent version of every application.
 ### Julia
 
 1.  After installing Julia, open Julia and run the following commands:
-
     ``` r
     using Pkg
     Pkg.add("IJulia")
     ```
-
 2.  When the process is complete, you may close Julia
 
 ### R and RStudio
 
 1.  Install R, then RStudio
-
 2.  Open RStudio. If the workstation has multiple versions of R available, RStudio will ask which one it should use. Select the most recent 64-bit version.
-
 3.  In the RStudio Console window, run the following command:
-
     ``` r
     install.packages("tidyverse")
     ```
-
 4.  When the process is complete, you may close RStudio
 
 ### uv
