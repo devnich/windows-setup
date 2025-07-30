@@ -1,8 +1,3 @@
----
-author: Derek Devnich
-title: Configuring Windows 11 for Research Computing
----
-
 - [<span class="toc-section-number">1</span> Application configuration](#application-configuration)
   - [<span class="toc-section-number">1.1</span> General installation instructions](#general-installation-instructions)
   - [<span class="toc-section-number">1.2</span> Update obsolete versions (summer 2025)](#update-obsolete-versions-summer-2025)
