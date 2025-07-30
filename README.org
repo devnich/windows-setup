@@ -24,13 +24,13 @@ The following applications were installed using obsolete installers (from 2023).
 Where to find the most recent version of every application.
 
 1. Anaconda Python distribution: https://www.anaconda.com/download/success
-   - Installer located under Distribution Installers > Windows > 64-Bit Graphical Installer
+   - Installer located under Distribution Installers → Windows → 64-Bit Graphical Installer
 2. Chrome: https://www.google.com/chrome/
 3. DB Browser for SQLite: https://sqlitebrowser.org/dl/
    - Choose the Standard installer for 64-bit Windows
 4. Firefox: https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/
 5. Git for Windows: https://github.com/git-for-windows/git/releases/latest
-   - Installer located under Assets > Git-/version-number/-64-bit.exe
+   - Installer located under Assets → Git-/version-number/-64-bit.exe
 6. Julia: https://apps.microsoft.com/store/detail/9NJNWW8PVKMN
 7. Matlab: https://it.ucmerced.edu/software-list
 8. Microsoft Office: https://it.ucmerced.edu/software-list
@@ -101,15 +101,15 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 After installing, make the following configuration changes.
 
 *** Chrome
-1. Autofill and passwords > Payment methods
+1. Autofill and passwords → Payment methods
    - Disable everything
-2. Autofill and passwords > Addresses and more
+2. Autofill and passwords → Addresses and more
    - Disable everything
-3. Privacy and Security > Ad Privacy
+3. Privacy and Security → Ad Privacy
    - Disable everything
 
 *** DB Browser for SQLite
-1. Edit > Preferences > SQL
+1. Edit → Preferences → SQL
    - SQL editor font: *Consolas*
    - SQL editor font size: *12*
 
@@ -117,25 +117,25 @@ After installing, make the following configuration changes.
 1. General
    - Disable "Recommend extensions as you browse"
    - Disable "Recommend features as you browse"
-2. General > Files and Applications > Downloads
-   - Select the *Workshop* folder on the Desktop (see "Windows Configuration" > "Default folders" later in this document)
+2. General → Files and Applications → Downloads
+   - Select the *Workshop* folder on the Desktop (see "Windows Configuration" → "Default folders" later in this document)
 3. Home
    - Home page and new windows: Select *Custom URLs* and paste https://libguides.ucmerced.edu/software-carpentry into the text box
    - New tabs: *Blank page*
-4. Home > Firefox Home Content
+4. Home → Firefox Home Content
    - Disable everything except "Web Search"
-5. Search > Search suggestions
+5. Search → Search suggestions
    - Disable "Show trending search suggestions"
-6. Search > Address bar
+6. Search → Address bar
    - Disable "Suggestions from Firefox"
    - Disable "Suggestions from sponsors"
-7. Privacy & Security > Cookies and Site Data
+7. Privacy & Security → Cookies and Site Data
    - Enable " Delete cookies and site data when Firefox is closed"
-8. Privacy & Security > Passwords
+8. Privacy & Security → Passwords
    - Disable everything
-9. Privacy & Security > Autofill
+9. Privacy & Security → Autofill
    - Disable everything
-10. Privacy & Security > Firefox Data Collection
+10. Privacy & Security → Firefox Data Collection
     - Disable everything
 11. Add the following bookmarks to the Bookmarks Toolbar:
     - Box: https://ucmerced.account.box.com/login
@@ -143,7 +143,7 @@ After installing, make the following configuration changes.
 12. Show the Bookmarks Toolbar
 
 *** Jupyter Lab
-All Jupyter Lab configuration settings are under Settings > Advanced Settings Editor
+All Jupyter Lab configuration settings are under Settings → Advanced Settings Editor
 1. Code Mirror
    - Enable "Auto Closing Brackets"
    - Font Size: *14*
@@ -152,7 +152,7 @@ All Jupyter Lab configuration settings are under Settings > Advanced Settings Ed
    - Fetch official Jupyter news: *false*
 
 *** Notepad ++
-1. Settings > Style Configurator > Font Style
+1. Settings → Style Configurator → Font Style
    - Font name: *Consolas*
    - Font size: *12*
 2. Enable "Enable global font"
@@ -161,11 +161,11 @@ All Jupyter Lab configuration settings are under Settings > Advanced Settings Ed
 *** Power Toys
 1. General
    - Disable "Run at Startup"
-2. Input/Output > Keyboard Manager
+2. Input/Output → Keyboard Manager
    - Enable "Keyboard Manager"
 
 *** RStudio
-All RStudio configuration settings are under Tools > Global Options
+All RStudio configuration settings are under Tools → Global Options
 
 1. General
    - Default working directory: *C:/Users/DataVisLabWest*
@@ -173,22 +173,22 @@ All RStudio configuration settings are under Tools > Global Options
    - Disable "Restore previously opened source documents at startup"
    - Disable "Restore .RData into workspace at startup"
    - Save workspace to .RData on exit: *Never*
-2. Code > Editing
+2. Code → Editing
    - Enable "Insert matching parens"
    - Keybindings: *Emacs*
-3. Code > Display
+3. Code → Display
    - Enable "Allow scroll past end of document"
    - Enable "Use rainbow parentheses"
 4. Appearance
    - Editor font: *Consolas*
    - Editor font size: *12*
 5. Pane layout
-   - Derek will do this (also available in AppData > Roaming > RStudio > rstudio-prefs.json)
+   - Derek will do this (also available in AppData → Roaming → RStudio → rstudio-prefs.json)
 
 *** COMMENT Git Bash
 Superseded? May now inherit from Powershell profile
 
-Right click > Options
+Right click → Options
 1. Under "Text", click "Select"
    - Under Font, select "Consolas"
    - Under Size, select "12"
@@ -218,7 +218,7 @@ Right click > Options
    - File Explorer
    - Settings
 
-2. Settings > Personalization > Start
+2. Settings → Personalization → Start
    - Disable all settings
 
 ** File Explorer
@@ -227,11 +227,11 @@ Right click > Options
    - Select "List"
 3. Sort
    - Select "Type"
-4. Options > General
+4. Options → General
    - Disable "Show recently used files"
    - Disable "Show frequently used folders"
    - Disable "Show files from Office.com"
-5. Options > View
+5. Options → View
    - Enable "View hidden files"
    - Disable "Hide extensions for known file types"
    - After making changes, click *Apply to folders* button
@@ -243,18 +243,18 @@ Right click > Options
 4. Add Firefox
 
 ** Widgets
-1. Settings > Personalization > Taskbar
+1. Settings → Personalization → Taskbar
    - Disable "Widgets"
 
 ** Apps
-1. Settings > Apps > Default apps > Firefox
+1. Settings → Apps → Default apps → Firefox
    - Next to "Make Firefox your default browser", click *Set default*
 
 ** Keyboard
-1. Settings > Time & language > Language & region
+1. Settings → Time & language → Language & region
    1. Next to "English (United States)", click the *...* icon and select *Language Options*
    2. Under "Keyboards", click *Add a keyboard* and select *United States-Dvorak*
-2. Settings > Time & language > Typing > Advanced keyboard settings
+2. Settings → Time & language → Typing → Advanced keyboard settings
    1. Select *Input language hot keys*
    2. Select *Between input languages* and click *Change Key Sequence*
    3. Set "Switch Input Language" to *Not Assigned*
@@ -271,15 +271,15 @@ Right click > Options
 *** Settings (in Edge application menu)
 1. Profiles
    - Disable "Earn Microsoft Rewards"
-2. Privacy, search, and services > Clear browsing data > Choose what to clear every time you close the browser
+2. Privacy, search, and services → Clear browsing data → Choose what to clear every time you close the browser
    - Disable all settings
-3. Privacy, search, and services > Privacy
+3. Privacy, search, and services → Privacy
    - Disable all settings
-4. Privacy, search, and services > Search and connected experiences
+4. Privacy, search, and services → Search and connected experiences
    - Disable all settings except "Use a web service to help resolve navigation errors"
-5. Copilot and sidebar > Copilot
+5. Copilot and sidebar → Copilot
    - Disable "Show Copilot button on the toolbar"
-6. Languages > Writing assistance
+6. Languages → Writing assistance
    - Disable all settings
 
 * COMMENT Reference
