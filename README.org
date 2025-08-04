@@ -46,8 +46,8 @@ Where to find the most recent version of every application.
 *** Anaconda Python distribution
 1. Uninstall previous version
 2. Delete Start Menu items for previous version
-3. Install
-4. Open Anaconda Powershell Prompt and run the following command:
+3. Install for single user ("Just Me" option)
+4. Open Anaconda PowerShell Prompt and run the following command:
 
    #+BEGIN_SRC bash
    conda create -n lab --clone base
@@ -100,6 +100,10 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ** Application-specific configuration instructions
 After installing, make the following configuration changes.
 
+*** Anaconda Navigator
+1. On first startup, Navigator will open a modal window titled "Sign in for AI Coding Help." Select "Do not show again" and close the window.
+2. Locate the Anaconda Toolbox block. Click the gear in the upper right corner. If "Remove application" is available as an option (i.e. not grayed out), select it.
+
 *** Chrome
 1. Autofill and passwords → Payment methods
    - Disable everything
@@ -143,13 +147,18 @@ After installing, make the following configuration changes.
 12. Show the Bookmarks Toolbar
 
 *** Jupyter Lab
-All Jupyter Lab configuration settings are under Settings → Advanced Settings Editor
-1. Code Mirror
-   - Enable "Auto Closing Brackets"
-   - Font Size: *14*
-2. Notifications
-   - Disable "Check for JupyterLab updates"
-   - Fetch official Jupyter news: *false*
+1. To run Jupyter Lab, open Anaconda PowerShell Prompt and run the following command:
+   #+BEGIN_SRC bash
+   jupyter lab
+   #+END_SRC
+2. Select Firefox as the default browser
+3. All Jupyter Lab configuration settings are under Settings → Settings Editor
+   1. Code Mirror
+      - Enable "Auto Closing Brackets"
+      - Font Size: *14*
+   2. Notifications
+      - Disable "Check for JupyterLab updates"
+      - Fetch official Jupyter news: *false*
 
 *** Notepad ++
 1. Settings → Style Configurator → Font Style

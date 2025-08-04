@@ -65,8 +65,8 @@ Where to find the most recent version of every application.
 
 1.  Uninstall previous version
 2.  Delete Start Menu items for previous version
-3.  Install
-4.  Open Anaconda Powershell Prompt and run the following command:
+3.  Install for single user ("Just Me" option)
+4.  Open Anaconda PowerShell Prompt and run the following command:
     ``` bash
     conda create -n lab --clone base
     ```
@@ -124,7 +124,12 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 After installing, make the following configuration changes.
 
-### 1.5.1. Chrome
+### 1.5.1. Anaconda Navigator
+
+1.  On first startup, Navigator will open a modal window titled "Sign in for AI Coding Help." Select "Do not show again" and close the window.
+2.  Locate the Anaconda Toolbox block. Click the gear in the upper right corner. If "Remove application" is available as an option (i.e. not grayed out), select it.
+
+### 1.5.2. Chrome
 
 1.  Autofill and passwords → Payment methods
     - Disable everything
@@ -133,13 +138,13 @@ After installing, make the following configuration changes.
 3.  Privacy and Security → Ad Privacy
     - Disable everything
 
-### 1.5.2. DB Browser for SQLite
+### 1.5.3. DB Browser for SQLite
 
 1.  Edit → Preferences → SQL
     - SQL editor font: **Consolas**
     - SQL editor font size: **12**
 
-### 1.5.3. Firefox
+### 1.5.4. Firefox
 
 1.  General
     - Disable "Recommend extensions as you browse"
@@ -169,18 +174,22 @@ After installing, make the following configuration changes.
     - OneDrive: <https://merced-my.sharepoint.com>
 12. Show the Bookmarks Toolbar
 
-### 1.5.4. Jupyter Lab
+### 1.5.5. Jupyter Lab
 
-All Jupyter Lab configuration settings are under Settings → Advanced Settings Editor
+1.  To run Jupyter Lab, open Anaconda PowerShell Prompt and run the following command:
+    ``` bash
+    jupyter lab
+    ```
+2.  Select Firefox as the default browser
+3.  All Jupyter Lab configuration settings are under Settings → Settings Editor
+    1.  Code Mirror
+        - Enable "Auto Closing Brackets"
+        - Font Size: **14**
+    2.  Notifications
+        - Disable "Check for JupyterLab updates"
+        - Fetch official Jupyter news: **false**
 
-1.  Code Mirror
-    - Enable "Auto Closing Brackets"
-    - Font Size: **14**
-2.  Notifications
-    - Disable "Check for JupyterLab updates"
-    - Fetch official Jupyter news: **false**
-
-### 1.5.5. Notepad ++
+### 1.5.6. Notepad ++
 
 1.  Settings → Style Configurator → Font Style
     - Font name: **Consolas**
@@ -188,14 +197,14 @@ All Jupyter Lab configuration settings are under Settings → Advanced Settings 
 2.  Enable "Enable global font"
 3.  Enable "Enable global font size"
 
-### 1.5.6. Power Toys
+### 1.5.7. Power Toys
 
 1.  General
     - Disable "Run at Startup"
 2.  Input/Output → Keyboard Manager
     - Enable "Keyboard Manager"
 
-### 1.5.7. RStudio
+### 1.5.8. RStudio
 
 All RStudio configuration settings are under Tools → Global Options
 
