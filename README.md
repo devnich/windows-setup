@@ -130,7 +130,7 @@ Where to find the most recent version of every application.
 
 ### 1.4.7. uv
 
-Open Powershell and run the following command:
+Open PowerShell and run the following command:
 
 ``` bash
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
@@ -219,7 +219,7 @@ After installing, make the following configuration changes.
 2.  Enable "Enable global font"
 3.  Enable "Enable global font size"
 
-### 1.5.7. Power Toys
+### 1.5.7. PowerToys
 
 1.  General → Version & updates
     - Disable everything
@@ -227,6 +227,11 @@ After installing, make the following configuration changes.
     - Disable "Run at Startup"
 3.  Input/Output → Keyboard Manager
     - Enable "Keyboard Manager"
+    - Click "Remap a key"
+    - Click "Add key remapping"
+      - Select: **Caps Lock**
+      - To Send: **Ctrl (Left)**
+    - Click "OK", then click "Continue anyway"
 
 ### 1.5.8. RStudio
 
@@ -267,7 +272,7 @@ All RStudio configuration settings are under Tools → Global Options
 ## 2.3. Start Menu
 
 1.  Pin the following applications (and unpin all others)
-    - Anaconda Powershell Prompt
+    - Anaconda PowerShell Prompt
     - DB Browser for SQLite
     - Firefox
     - Git Bash

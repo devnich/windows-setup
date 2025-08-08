@@ -107,7 +107,7 @@ Where to find the most recent version of every application.
 5. When the process is complete, you may close RStudio
 
 *** uv
-Open Powershell and run the following command:
+Open PowerShell and run the following command:
 #+BEGIN_SRC bash
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 #+END_SRC
@@ -188,13 +188,18 @@ After installing, make the following configuration changes.
 2. Enable "Enable global font"
 3. Enable "Enable global font size"
 
-*** Power Toys
+*** PowerToys
 1. General → Version & updates
    - Disable everything
 2. General → Appearance & behavior
    - Disable "Run at Startup"
 3. Input/Output → Keyboard Manager
    - Enable "Keyboard Manager"
+   - Click "Remap a key"
+   - Click "Add key remapping"
+     + Select: *Caps Lock*
+     + To Send: *Ctrl (Left)*
+   - Click "OK", then click "Continue anyway"
 
 *** RStudio
 All RStudio configuration settings are under Tools → Global Options
@@ -219,7 +224,7 @@ All RStudio configuration settings are under Tools → Global Options
    - Set the upper right pane to Source
 
 *** COMMENT Git Bash
-Superseded? May now inherit from Powershell profile
+Superseded? May now inherit from PowerShell profile
 
 Right click → Options
 1. Under "Text", click "Select"
@@ -240,7 +245,7 @@ Right click → Options
 
 ** Start Menu
 1. Pin the following applications (and unpin all others)
-   - Anaconda Powershell Prompt
+   - Anaconda PowerShell Prompt
    - DB Browser for SQLite
    - Firefox
    - Git Bash
@@ -327,7 +332,7 @@ This section provides a place to document supporting information and occasional 
 
 ** Github authentication with SSH
 *** Create a new public key pair
-1. Open Powershell and run the following command:
+1. Open PowerShell and run the following command:
    #+BEGIN_SRC bash
    # Creates an ed25519 key pair by default
    ssh-keygen -C "your email"
