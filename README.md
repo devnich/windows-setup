@@ -87,7 +87,7 @@ Where to find the most recent version of every application.
 ### 1.4.3. DejaVu Fonts
 
 1.  Open Settings → Personalization → Fonts
-2.  Open **Documents/Installers/dejavu-fonts-ttf-\<version\>/ttf**. Select all of the font files and drag them into the "Drag and drop to install".
+2.  Open **Documents/Installers/dejavu-fonts-ttf-\<version\>/ttf**. Select all of the font files and drag them into the "Drag and drop to install" pane in Settings.
 
 ### 1.4.4. Git for Windows
 
