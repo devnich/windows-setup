@@ -20,11 +20,14 @@
 
 ## 1.1. General installation instructions
 
-You can find all of the installers in **Documents/Installers**. When installing:
-
-1.  Add the program to the Start Menu
-2.  Don't create a Desktop shortcut
-3.  Don't add the program to the Taskbar
+1.  Make sure you are logged in as the DatVisLabWest user. Installing as the LibITLabWest user will break some applications.
+2.  You can find all of the installers in **Documents/Installers**. When installing:
+    - Add the program to the Start Menu
+    - Don't create a Desktop shortcut
+    - Don't add the program to the Taskbar
+3.  Some applications require changing the default installation parameters. Check the "Application-specific installation instructions" section to see if you need to make any changes.
+4.  If an application automatically opens after installation, check the "Application-specific configuration instructions" section to see if you need to make any changes.
+5.  Don't perform any auto-updates during installation.
 
 ## 1.2. Update obsolete versions (summer 2025)
 
@@ -70,15 +73,16 @@ Where to find the most recent version of every application.
 1.  Uninstall previous version
 2.  Delete Start Menu items for previous version
 3.  Install for single user ("Just Me" option)
-4.  Open Anaconda PowerShell Prompt and run the following command:
+4.  Select "Create shortcuts" (this should be checked by default)
+5.  Open Anaconda PowerShell Prompt and run the following command:
     ``` bash
     conda create -n lab --clone base
     ```
-5.  When the process is complete (it will take several minutes), you may close Powershell
+6.  When the process is complete (it will take several minutes), you may close Powershell
 
 ### 1.4.2. DB Browser for SQLite
 
-1.  Don't create a menu item for the Cipher version of SQLite
+1.  De-select the the option to create a Program Menu entry for DB Browser Cipher.
 
 ### 1.4.3. Git for Windows
 
@@ -99,22 +103,24 @@ Where to find the most recent version of every application.
 
 ### 1.4.4. Julia
 
-1.  After installing Julia, open Julia and run the following commands:
+1.  The Julia installer will open a console window and install from the Microsoft Store.
+2.  After installing Julia, run the following commands in the Julia console window:
     ``` r
     using Pkg
     Pkg.add("IJulia")
     ```
-2.  When the process is complete, you may close Julia
+3.  When the process is complete, you may close Julia
 
 ### 1.4.5. R and RStudio
 
 1.  Install R, then RStudio
 2.  Open RStudio. If the workstation has multiple versions of R available, RStudio will ask which one it should use. Select the most recent 64-bit version.
-3.  In the RStudio Console window, run the following command:
+3.  A pop-up window will ask if you want to submit crash reports. Click "No"
+4.  In the RStudio Console window, run the following command:
     ``` r
     install.packages("tidyverse")
     ```
-4.  When the process is complete, you may close RStudio
+5.  When the process is complete, you may close RStudio
 
 ### 1.4.6. uv
 
@@ -150,33 +156,34 @@ After installing, make the following configuration changes.
 
 ### 1.5.4. Firefox
 
-1.  General
+1.  Create a folder on the **Desktop** called **Workshop** if it doesn't already exist.
+2.  General
     - Disable "Recommend extensions as you browse"
     - Disable "Recommend features as you browse"
-2.  General → Files and Applications → Downloads
-    - Select the **Workshop** folder on the Desktop (see "Windows Configuration" → "Default folders" later in this document)
-3.  Home
+3.  General → Files and Applications → Downloads
+    - Select the **Workshop** folder on the Desktop
+4.  Home
     - Home page and new windows: Select **Custom URLs** and paste <https://libguides.ucmerced.edu/software-carpentry> into the text box
     - New tabs: **Blank page**
-4.  Home → Firefox Home Content
+5.  Home → Firefox Home Content
     - Disable everything except "Web Search"
-5.  Search → Search suggestions
+6.  Search → Search suggestions
     - Disable "Show trending search suggestions"
-6.  Search → Address bar
+7.  Search → Address bar
     - Disable "Suggestions from Firefox"
     - Disable "Suggestions from sponsors"
-7.  Privacy & Security → Cookies and Site Data
+8.  Privacy & Security → Cookies and Site Data
     - Enable " Delete cookies and site data when Firefox is closed"
-8.  Privacy & Security → Passwords
+9.  Privacy & Security → Passwords
     - Disable everything
-9.  Privacy & Security → Autofill
+10. Privacy & Security → Autofill
     - Disable everything
-10. Privacy & Security → Firefox Data Collection
+11. Privacy & Security → Firefox Data Collection
     - Disable everything
-11. Add the following bookmarks to the Bookmarks Toolbar:
+12. Add the following bookmarks to the Bookmarks Toolbar:
     - Box: <https://ucmerced.account.box.com/login>
     - OneDrive: <https://merced-my.sharepoint.com>
-12. Show the Bookmarks Toolbar
+13. Show the Bookmarks Toolbar
 
 ### 1.5.5. Jupyter Lab
 
