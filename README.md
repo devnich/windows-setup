@@ -82,7 +82,7 @@ Where to find the most recent version of every application.
 
 ### 1.4.2. DB Browser for SQLite
 
-1.  De-select the the option to create a Program Menu entry for DB Browser Cipher.
+1.  De-select the the option to create a Program Menu entry for "DB Browser (SQLCipher)".
 
 ### 1.4.3. DejaVu Fonts
 
@@ -108,13 +108,14 @@ Where to find the most recent version of every application.
 
 ### 1.4.5. Julia
 
-1.  The Julia installer will open a console window and install from the Microsoft Store.
-2.  After installing Julia, run the following commands in the Julia console window:
+1.  The Julia installer will open the Microsoft Store. Click the "Get" button, then click "Open".
+2.  Julia will open a console window and begin the installation process.
+3.  After installing Julia, run the following commands in the Julia console window:
     ``` r
     using Pkg
     Pkg.add("IJulia")
     ```
-3.  When the process is complete, you may close Julia
+4.  When the process is complete, you may close Julia
 
 ### 1.4.6. R and RStudio
 
@@ -155,41 +156,45 @@ After installing, make the following configuration changes.
 
 ### 1.5.3. DB Browser for SQLite
 
-1.  Edit → Preferences → SQL
+1.  1\. Edit → Preferences → General
+    - Font size: **10**
+2.  Edit → Preferences → SQL
     - SQL editor font: **Consolas**
     - SQL editor font size: **12**
 
 ### 1.5.4. Firefox
 
 1.  Create a folder on the **Desktop** called **Workshop** if it doesn't already exist.
-2.  General
-    - Disable "Recommend extensions as you browse"
-    - Disable "Recommend features as you browse"
+2.  General → Tabs
+    - Disable "Use AI to suggest tabs and a name for tabs groups"
 3.  General → Files and Applications → Downloads
     - Select the **Workshop** folder on the Desktop
-4.  Home
+4.  General → Browsing
+    - Disable "Recommend extensions as you browse"
+    - Disable "Recommend features as you browse"
+5.  Home
     - Home page and new windows: Select **Custom URLs** and paste <https://libguides.ucmerced.edu/software-carpentry> into the text box
     - New tabs: **Blank page**
-5.  Home → Firefox Home Content
+6.  Home → Firefox Home Content
     - Disable everything except "Web Search"
-6.  Search → Search suggestions
+7.  Search → Search suggestions
     - Disable "Show trending search suggestions"
-7.  Search → Address bar
+8.  Search → Address bar
     - Disable "Suggestions from Firefox"
     - Disable "Suggestions from sponsors"
-8.  Privacy & Security → Cookies and Site Data
+9.  Privacy & Security → Cookies and Site Data
     - Enable " Delete cookies and site data when Firefox is closed"
-9.  Privacy & Security → Passwords
+10. Privacy & Security → Passwords
     - Disable everything
-10. Privacy & Security → Autofill
+11. Privacy & Security → Autofill
     - Disable everything
-11. Privacy & Security → Firefox Data Collection
+12. Privacy & Security → Firefox Data Collection
     - Disable everything
-12. Add the following bookmarks to the Bookmarks Toolbar:
+13. Add the following bookmarks to the Bookmarks Toolbar:
     - Software Carpentry: <https://libguides.ucmerced.edu/software-carpentry>
     - Box: <https://ucmerced.account.box.com/login>
     - OneDrive: <https://merced-my.sharepoint.com>
-13. Show the Bookmarks Toolbar
+14. Show the Bookmarks Toolbar
 
 ### 1.5.5. Jupyter Lab
 
@@ -216,9 +221,11 @@ After installing, make the following configuration changes.
 
 ### 1.5.7. Power Toys
 
-1.  General
+1.  General → Version & updates
+    - Disable everything
+2.  General → Appearance & behavior
     - Disable "Run at Startup"
-2.  Input/Output → Keyboard Manager
+3.  Input/Output → Keyboard Manager
     - Enable "Keyboard Manager"
 
 ### 1.5.8. RStudio
@@ -241,7 +248,8 @@ All RStudio configuration settings are under Tools → Global Options
     - Editor font: **Consolas**
     - Editor font size: **12**
 5.  Pane layout
-    - Derek will do this (also available in AppData → Roaming → RStudio → rstudio-prefs.json)
+    - Set the upper right pane to Console
+    - Set the upper left pane to Source
 
 # 2. Windows configuration
 
