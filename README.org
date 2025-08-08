@@ -37,16 +37,15 @@ Where to find the most recent version of every application.
 6. Git for Windows: https://github.com/git-for-windows/git/releases/latest
    - Installer located under Assets → Git-/version-number/-64-bit.exe
 7. Julia: https://apps.microsoft.com/store/detail/9NJNWW8PVKMN
-8. Matlab: https://it.ucmerced.edu/software-list
-9. Microsoft Office: https://it.ucmerced.edu/software-list
-10. Microsoft Powertoys: https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD
-    - There is no local installer
-11. MobaXTerm: https://mobaxterm.mobatek.net/download-home-edition.html
+8. Microsoft Office: https://it.ucmerced.edu/software-list
+9. Microsoft Powertoys: https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD
+   - There is no local installer
+10. MobaXTerm: https://mobaxterm.mobatek.net/download-home-edition.html
     - Choose the Installer edition
-12. Notepad++: https://notepad-plus-plus.org/downloads/
-13. R: https://cran.r-project.org/bin/windows/base/
-14. RStudio: https://posit.co/download/rstudio-desktop/
-15. uv: https://docs.astral.sh/uv/getting-started/installation/
+11. Notepad++: https://notepad-plus-plus.org/downloads/
+12. R: https://cran.r-project.org/bin/windows/base/
+13. RStudio: https://posit.co/download/rstudio-desktop/
+14. uv: https://docs.astral.sh/uv/getting-started/installation/
     - There is no local installer
 
 ** Application-specific installation instructions
@@ -55,16 +54,21 @@ Where to find the most recent version of every application.
 2. Delete Start Menu items for previous version
 3. Install for single user ("Just Me" option)
 4. Select "Create shortcuts" (this should be checked by default)
-5. Open Anaconda PowerShell Prompt and run the following command:
+5. When setup in complete, de-select "Launch Anaconda Navigator" and "Welcome to Anaconda" and click "Finish"
+6. Open Anaconda PowerShell Prompt and run the following command:
 
    #+BEGIN_SRC bash
    conda create -n lab --clone base
    #+END_SRC
 
-6. When the process is complete (it will take several minutes), you may close Powershell
+7. When the process is complete (it will take several minutes), you may close PowerShell
 
 *** DB Browser for SQLite
 1. De-select the the option to create a Program Menu entry for DB Browser Cipher.
+
+*** DejaVu Fonts
+1. Open Settings → Personalization → Fonts
+2. Open *Documents/Installers/dejavu-fonts-ttf-<version>/ttf*. Select all of the font files and drag them into the "Drag and drop to install".
 
 *** Git for Windows
 1. Run the installer. Click *Next* four times (two times if you've previously installed Git). You don't need to change anything in the Information, Location, Components, or Start Menu screens.
@@ -153,6 +157,7 @@ After installing, make the following configuration changes.
 11. Privacy & Security → Firefox Data Collection
     - Disable everything
 12. Add the following bookmarks to the Bookmarks Toolbar:
+    - Software Carpentry: https://libguides.ucmerced.edu/software-carpentry
     - Box: https://ucmerced.account.box.com/login
     - OneDrive: https://merced-my.sharepoint.com
 13. Show the Bookmarks Toolbar

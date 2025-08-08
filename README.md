@@ -54,16 +54,15 @@ Where to find the most recent version of every application.
 6.  Git for Windows: <https://github.com/git-for-windows/git/releases/latest>
     - Installer located under Assets → Git-*version-number*-64-bit.exe
 7.  Julia: <https://apps.microsoft.com/store/detail/9NJNWW8PVKMN>
-8.  Matlab: <https://it.ucmerced.edu/software-list>
-9.  Microsoft Office: <https://it.ucmerced.edu/software-list>
-10. Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
+8.  Microsoft Office: <https://it.ucmerced.edu/software-list>
+9.  Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
     - There is no local installer
-11. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
+10. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
     - Choose the Installer edition
-12. Notepad++: <https://notepad-plus-plus.org/downloads/>
-13. R: <https://cran.r-project.org/bin/windows/base/>
-14. RStudio: <https://posit.co/download/rstudio-desktop/>
-15. uv: <https://docs.astral.sh/uv/getting-started/installation/>
+11. Notepad++: <https://notepad-plus-plus.org/downloads/>
+12. R: <https://cran.r-project.org/bin/windows/base/>
+13. RStudio: <https://posit.co/download/rstudio-desktop/>
+14. uv: <https://docs.astral.sh/uv/getting-started/installation/>
     - There is no local installer
 
 ## 1.4. Application-specific installation instructions
@@ -74,17 +73,23 @@ Where to find the most recent version of every application.
 2.  Delete Start Menu items for previous version
 3.  Install for single user ("Just Me" option)
 4.  Select "Create shortcuts" (this should be checked by default)
-5.  Open Anaconda PowerShell Prompt and run the following command:
+5.  When setup in complete, de-select "Launch Anaconda Navigator" and "Welcome to Anaconda" and click "Finish"
+6.  Open Anaconda PowerShell Prompt and run the following command:
     ``` bash
     conda create -n lab --clone base
     ```
-6.  When the process is complete (it will take several minutes), you may close Powershell
+7.  When the process is complete (it will take several minutes), you may close PowerShell
 
 ### 1.4.2. DB Browser for SQLite
 
 1.  De-select the the option to create a Program Menu entry for DB Browser Cipher.
 
-### 1.4.3. Git for Windows
+### 1.4.3. DejaVu Fonts
+
+1.  Open Settings → Personalization → Fonts
+2.  Open **Documents/Installers/dejavu-fonts-ttf-\<version\>/ttf**. Select all of the font files and drag them into the "Drag and drop to install".
+
+### 1.4.4. Git for Windows
 
 1.  Run the installer. Click **Next** four times (two times if you've previously installed Git). You don't need to change anything in the Information, Location, Components, or Start Menu screens.
 2.  For each configuration screen, select the appropriate option and click **Next**:
@@ -101,7 +106,7 @@ Where to find the most recent version of every application.
 3.  Click **Install**
 4.  Click on **Finish** or **Next**
 
-### 1.4.4. Julia
+### 1.4.5. Julia
 
 1.  The Julia installer will open a console window and install from the Microsoft Store.
 2.  After installing Julia, run the following commands in the Julia console window:
@@ -111,7 +116,7 @@ Where to find the most recent version of every application.
     ```
 3.  When the process is complete, you may close Julia
 
-### 1.4.5. R and RStudio
+### 1.4.6. R and RStudio
 
 1.  Install R, then RStudio
 2.  Open RStudio. If the workstation has multiple versions of R available, RStudio will ask which one it should use. Select the most recent 64-bit version.
@@ -122,7 +127,7 @@ Where to find the most recent version of every application.
     ```
 5.  When the process is complete, you may close RStudio
 
-### 1.4.6. uv
+### 1.4.7. uv
 
 Open Powershell and run the following command:
 
@@ -181,6 +186,7 @@ After installing, make the following configuration changes.
 11. Privacy & Security → Firefox Data Collection
     - Disable everything
 12. Add the following bookmarks to the Bookmarks Toolbar:
+    - Software Carpentry: <https://libguides.ucmerced.edu/software-carpentry>
     - Box: <https://ucmerced.account.box.com/login>
     - OneDrive: <https://merced-my.sharepoint.com>
 13. Show the Bookmarks Toolbar
