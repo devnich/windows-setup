@@ -13,7 +13,8 @@
   - [2.6. Widgets](#widgets)
   - [2.7. Apps](#apps)
   - [2.8. Keyboard](#keyboard)
-  - [2.9. Microsoft Edge](#microsoft-edge)
+  - [2.9. Search](#search)
+  - [2.10. Microsoft Edge](#microsoft-edge)
 
 # 1. Application configuration
 
@@ -45,19 +46,22 @@ Where to find the most recent version of every application.
 2.  Chrome: <https://www.google.com/chrome/>
 3.  DB Browser for SQLite: <https://sqlitebrowser.org/dl/>
     - Choose the Standard installer for 64-bit Windows
-4.  Firefox: <https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/>
-5.  Git for Windows: <https://github.com/git-for-windows/git/releases/latest>
+4.  DejaVu fonts: <https://dejavu-fonts.github.io>
+5.  Firefox: <https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/>
+6.  Git for Windows: <https://github.com/git-for-windows/git/releases/latest>
     - Installer located under Assets → Git-*version-number*-64-bit.exe
-6.  Julia: <https://apps.microsoft.com/store/detail/9NJNWW8PVKMN>
-7.  Matlab: <https://it.ucmerced.edu/software-list>
-8.  Microsoft Office: <https://it.ucmerced.edu/software-list>
-9.  Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
-10. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
+7.  Julia: <https://apps.microsoft.com/store/detail/9NJNWW8PVKMN>
+8.  Matlab: <https://it.ucmerced.edu/software-list>
+9.  Microsoft Office: <https://it.ucmerced.edu/software-list>
+10. Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
+    - There is no local installer
+11. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
     - Choose the Installer edition
-11. Notepad++: <https://notepad-plus-plus.org/downloads/>
-12. R: <https://cran.r-project.org/bin/windows/base/>
-13. RStudio: <https://posit.co/download/rstudio-desktop/>
-14. uv: <https://docs.astral.sh/uv/getting-started/installation/>
+12. Notepad++: <https://notepad-plus-plus.org/downloads/>
+13. R: <https://cran.r-project.org/bin/windows/base/>
+14. RStudio: <https://posit.co/download/rstudio-desktop/>
+15. uv: <https://docs.astral.sh/uv/getting-started/installation/>
+    - There is no local installer
 
 ## 1.4. Application-specific installation instructions
 
@@ -300,16 +304,21 @@ All RStudio configuration settings are under Tools → Global Options
     4.  Set "Switch Keyboard Layout" to **Not Assigned**
     5.  Click **OK**, then click **OK** again
 
-## 2.9. Microsoft Edge
+## 2.9. Search
 
-### 2.9.1. Page Settings (gear icon on page)
+1.  Settings → Privacy & security → Search permissions
+    - Under "More settings", disable "Show search highlights"
+
+## 2.10. Microsoft Edge
+
+### 2.10.1. Page Settings (gear icon on page)
 
 - Disable "Show sponsored links"
 - Disable "Show content"
 - Disable "Show widgets"
 - Disable "Show feed"
 
-### 2.9.2. Settings (in Edge application menu)
+### 2.10.2. Settings (in Edge application menu)
 
 1.  Profiles
     - Disable "Earn Microsoft Rewards"
