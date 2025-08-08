@@ -70,7 +70,9 @@ Where to find the most recent version of every application.
 ### 1.4.1. Anaconda Python distribution
 
 1.  Uninstall previous version
-2.  Delete Start Menu items for previous version
+2.  Delete Start Menu items for previous version.
+    - Navigate to **DataVisLabWest/AppData/Roaming/Microsoft/Windows/Start Menu/Programs**
+    - Delete the "Anaconda" folder
 3.  Install for single user ("Just Me" option)
 4.  Select "Create shortcuts" (this should be checked by default)
 5.  When setup in complete, de-select "Launch Anaconda Navigator" and "Welcome to Anaconda" and click "Finish"
@@ -235,7 +237,7 @@ After installing, make the following configuration changes.
 
 ### 1.5.8. RStudio
 
-All RStudio configuration settings are under Tools → Global Options
+All RStudio configuration settings are under Tools → Global Options. When you have finished changing the configuration settings, click "Apply" and then click "OK".
 
 1.  General
     - Default working directory: **C:/Users/DataVisLabWest**
@@ -243,6 +245,7 @@ All RStudio configuration settings are under Tools → Global Options
     - Disable "Restore previously opened source documents at startup"
     - Disable "Restore .RData into workspace at startup"
     - Save workspace to .RData on exit: **Never**
+    - Disable "Automatically notify me of updates to RStudio"
 2.  Code → Editing
     - Enable "Insert matching parens"
     - Keybindings: **Emacs**
