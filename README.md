@@ -248,8 +248,8 @@ All RStudio configuration settings are under Tools → Global Options
     - Editor font: **Consolas**
     - Editor font size: **12**
 5.  Pane layout
-    - Set the upper right pane to Console
-    - Set the upper left pane to Source
+    - Set the upper left pane to Console
+    - Set the upper right pane to Source
 
 # 2. Windows configuration
 
