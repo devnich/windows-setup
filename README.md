@@ -262,7 +262,7 @@ All RStudio configuration settings are under Tools → Global Options
 ## 2.2. Desktop
 
 1.  Delete all Desktop shortcuts
-2.  Set background to **Documents/Installers/earth_vir_2016_lrg.jpg**
+2.  Set background to **Documents/Installers/earth_vir_2016_lrg.jpg** by right-clicking on the file and selecting "Set as desktop background".
 
 ## 2.3. Start Menu
 
@@ -282,7 +282,7 @@ All RStudio configuration settings are under Tools → Global Options
 
 ## 2.4. File Explorer
 
-1.  Pin **Users/DataVisLabWest** folder to Quick Access
+1.  Pin **Users/DataVisLabWest** folder to Quick Access. Then navigate to **Users/DataVisLabWest** to configure the settings below.
 2.  View
     - Select "List"
 3.  Sort
@@ -292,7 +292,7 @@ All RStudio configuration settings are under Tools → Global Options
     - Disable "Show frequently used folders"
     - Disable "Show files from Office.com"
 5.  Options → View
-    - Enable "View hidden files"
+    - Enable "Show hidden files, folders, and drives"
     - Disable "Hide extensions for known file types"
     - After making changes, click **Apply to folders** button
 
@@ -344,7 +344,7 @@ All RStudio configuration settings are under Tools → Global Options
 1.  Profiles
     - Disable "Earn Microsoft Rewards"
 2.  Privacy, search, and services → Clear browsing data → Choose what to clear every time you close the browser
-    - Disable all settings
+    - Enable all settings
 3.  Privacy, search, and services → Privacy
     - Disable all settings
 4.  Privacy, search, and services → Search and connected experiences
