@@ -357,7 +357,7 @@ All RStudio configuration settings are under Tools → Global Options. When you 
     - Disable all settings
 4.  Privacy, search, and services → Search and connected experiences
     - Disable all settings except "Use a web service to help resolve navigation errors"
-5.  Copilot and sidebar → Copilot
+5.  Appearance → Copilot and sidebar → Copilot
     - Disable "Show Copilot button on the toolbar"
 6.  Languages → Writing assistance
     - Disable all settings

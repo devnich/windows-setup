@@ -322,7 +322,7 @@ Right click → Options
    - Disable all settings
 4. Privacy, search, and services → Search and connected experiences
    - Disable all settings except "Use a web service to help resolve navigation errors"
-5. Copilot and sidebar → Copilot
+5. Appearance → Copilot and sidebar → Copilot
    - Disable "Show Copilot button on the toolbar"
 6. Languages → Writing assistance
    - Disable all settings
@@ -396,12 +396,14 @@ Do this if you want code syntax highlighting and a table of contents on Github.
    # Generate markdown file
    pandoc -f org -t gfm --toc --toc-depth=2 --wrap=none -N -s README.org -o README.md
 
-   # Alternatively, generate markdown file with tight spacing for all lists. If a list
-   # contains code blocks, Pandoc will automatically format it with wide spacing. The
-   # compact_list.lua filter reformats it to remove the whitespace lines.
+   # Alternatively, generate markdown file with tight spacing for all lists. If a
+   # list contains code blocks, Pandoc will automatically format it with wide
+   # spacing. The compact_list.lua filter reformats it to remove the whitespace
+   # lines.
    pandoc -f org -t gfm --toc --toc-depth=2 --wrap=none -N -s --lua-filter ./compact_list.lua README.org -o README.md
 
-   # Add section headers. This doesn't create clickable links, but it does create section numbers in the document
+   # Add section headers. This doesn't create clickable links, but it does create
+   # section numbers in the document. This is our default.
    pandoc -f org -t gfm --toc --toc-depth=2 --wrap=none -s --lua-filter ./compact_list.lua --lua-filter ./pandoc-section-number-filter.lua README.org -o README.md
    #+END_SRC
 
