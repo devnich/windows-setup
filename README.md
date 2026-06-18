@@ -1,24 +1,24 @@
-- [1. Application configuration](#application-configuration)
-  - [1.1. General installation instructions](#general-installation-instructions)
-  - [1.2. Update obsolete versions (summer 2025)](#update-obsolete-versions-summer-2025)
-  - [1.3. Application manifest](#application-manifest)
-  - [1.4. Application-specific installation instructions](#application-specific-installation-instructions)
-  - [1.5. Application-specific configuration instructions](#application-specific-configuration-instructions)
-- [2. Windows configuration](#windows-configuration)
-  - [2.1. Default Folders](#default-folders)
-  - [2.2. Desktop](#desktop)
-  - [2.3. Start Menu](#start-menu)
-  - [2.4. File Explorer](#file-explorer)
-  - [2.5. Taskbar](#taskbar)
-  - [2.6. Widgets](#widgets)
-  - [2.7. Apps](#apps)
-  - [2.8. Keyboard](#keyboard)
-  - [2.9. Search](#search)
-  - [2.10. Microsoft Edge](#microsoft-edge)
+- [<span class="toc-section-number">1</span> Application configuration](#application-configuration)
+  - [<span class="toc-section-number">1.1</span> General installation instructions](#general-installation-instructions)
+  - [<span class="toc-section-number">1.2</span> Update obsolete versions (summer 2025)](#update-obsolete-versions-summer-2025)
+  - [<span class="toc-section-number">1.3</span> Application manifest](#application-manifest)
+  - [<span class="toc-section-number">1.4</span> Application-specific installation instructions](#application-specific-installation-instructions)
+  - [<span class="toc-section-number">1.5</span> Application-specific configuration instructions](#application-specific-configuration-instructions)
+- [<span class="toc-section-number">2</span> Windows configuration](#windows-configuration)
+  - [<span class="toc-section-number">2.1</span> Default Folders](#default-folders)
+  - [<span class="toc-section-number">2.2</span> Desktop](#desktop)
+  - [<span class="toc-section-number">2.3</span> Start Menu](#start-menu)
+  - [<span class="toc-section-number">2.4</span> File Explorer](#file-explorer)
+  - [<span class="toc-section-number">2.5</span> Taskbar](#taskbar)
+  - [<span class="toc-section-number">2.6</span> Widgets](#widgets)
+  - [<span class="toc-section-number">2.7</span> Apps](#apps)
+  - [<span class="toc-section-number">2.8</span> Keyboard](#keyboard)
+  - [<span class="toc-section-number">2.9</span> Search](#search)
+  - [<span class="toc-section-number">2.10</span> Microsoft Edge](#microsoft-edge)
 
-# 1. Application configuration
+# Application configuration
 
-## 1.1. General installation instructions
+## General installation instructions
 
 1.  Make sure you are logged in as the DatVisLabWest user. Installing as the LibITLabWest user will break some applications.
 2.  You can find all of the installers in **Documents/Installers**. When installing:
@@ -29,7 +29,7 @@
 4.  If an application automatically opens after installation, check the "Application-specific configuration instructions" section to see if you need to make any changes.
 5.  Don't perform any auto-updates during installation.
 
-## 1.2. Update obsolete versions (summer 2025)
+## Update obsolete versions (summer 2025)
 
 The following applications were installed using obsolete installers (from 2023). They should be completely un-installed and re-installed:
 
@@ -40,7 +40,7 @@ The following applications were installed using obsolete installers (from 2023).
 5.  DB Browser for SQLite
 6.  MobaXTerm
 
-## 1.3. Application manifest
+## Application manifest
 
 Where to find the most recent version of every application.
 
@@ -65,9 +65,9 @@ Where to find the most recent version of every application.
 14. uv: <https://docs.astral.sh/uv/getting-started/installation/>
     - There is no local installer
 
-## 1.4. Application-specific installation instructions
+## Application-specific installation instructions
 
-### 1.4.1. Anaconda Python distribution
+### Anaconda Python distribution
 
 1.  Uninstall previous version
 2.  Delete Start Menu items for previous version.
@@ -82,16 +82,16 @@ Where to find the most recent version of every application.
     ```
 7.  When the process is complete (it will take several minutes), you may close PowerShell
 
-### 1.4.2. DB Browser for SQLite
+### DB Browser for SQLite
 
 1.  De-select the the option to create a Program Menu entry for "DB Browser (SQLCipher)".
 
-### 1.4.3. DejaVu Fonts
+### DejaVu Fonts
 
 1.  Open Settings → Personalization → Fonts
 2.  Open **Documents/Installers/dejavu-fonts-ttf-\<version\>/ttf**. Select all of the font files and drag them into the "Drag and drop to install" pane in Settings.
 
-### 1.4.4. Git for Windows
+### Git for Windows
 
 1.  Run the installer. Click **Next** four times (two times if you've previously installed Git). You don't need to change anything in the Information, Location, Components, or Start Menu screens.
 2.  For each configuration screen, select the appropriate option and click **Next**:
@@ -108,7 +108,7 @@ Where to find the most recent version of every application.
 3.  Click **Install**
 4.  Click on **Finish** or **Next**
 
-### 1.4.5. Julia
+### Julia
 
 1.  The Julia installer will open the Microsoft Store. Click the "Get" button, then click "Open".
 2.  Julia will open a console window and begin the installation process.
@@ -119,7 +119,7 @@ Where to find the most recent version of every application.
     ```
 4.  When the process is complete, you may close Julia
 
-### 1.4.6. R and RStudio
+### R and RStudio
 
 1.  Install R, then RStudio
 2.  Open RStudio. If the workstation has multiple versions of R available, RStudio will ask which one it should use. Select the most recent 64-bit version.
@@ -130,7 +130,7 @@ Where to find the most recent version of every application.
     ```
 5.  When the process is complete, you may close RStudio
 
-### 1.4.7. uv
+### uv
 
 Open PowerShell and run the following command:
 
@@ -138,16 +138,16 @@ Open PowerShell and run the following command:
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-## 1.5. Application-specific configuration instructions
+## Application-specific configuration instructions
 
 After installing, make the following configuration changes.
 
-### 1.5.1. Anaconda Navigator
+### Anaconda Navigator
 
 1.  On first startup, Navigator will open a modal window titled "Sign in for AI Coding Help." Select "Do not show again" and close the window.
 2.  Locate the Anaconda Toolbox block. Click the gear in the upper right corner. If "Remove application" is available as an option (i.e. not grayed out), select it.
 
-### 1.5.2. Chrome
+### Chrome
 
 1.  Autofill and passwords → Payment methods
     - Disable everything
@@ -156,7 +156,7 @@ After installing, make the following configuration changes.
 3.  Privacy and Security → Ad Privacy
     - Disable everything
 
-### 1.5.3. DB Browser for SQLite
+### DB Browser for SQLite
 
 1.  1\. Edit → Preferences → General
     - Font size: **10**
@@ -164,7 +164,7 @@ After installing, make the following configuration changes.
     - SQL editor font: **Consolas**
     - SQL editor font size: **12**
 
-### 1.5.4. Firefox
+### Firefox
 
 1.  Create a folder on the **Desktop** called **Workshop** if it doesn't already exist.
 2.  General → Tabs
@@ -196,9 +196,9 @@ After installing, make the following configuration changes.
     - Software Carpentry: <https://libguides.ucmerced.edu/software-carpentry>
     - Box: <https://ucmerced.account.box.com/login>
     - OneDrive: <https://merced-my.sharepoint.com>
-14. Show the Bookmarks Toolbar
+14. Bookmarks → Show Bookmarks Toolbar
 
-### 1.5.5. Jupyter Lab
+### Jupyter Lab
 
 1.  To run Jupyter Lab, open Anaconda PowerShell Prompt and run the following command:
     ``` bash
@@ -213,7 +213,7 @@ After installing, make the following configuration changes.
         - Disable "Check for JupyterLab updates"
         - Fetch official Jupyter news: **false**
 
-### 1.5.6. Notepad ++
+### Notepad ++
 
 1.  Settings → Style Configurator → Font Style
     - Font name: **Consolas**
@@ -221,7 +221,7 @@ After installing, make the following configuration changes.
 2.  Enable "Enable global font"
 3.  Enable "Enable global font size"
 
-### 1.5.7. PowerToys
+### PowerToys
 
 1.  General → Version & updates
     - Disable everything
@@ -235,7 +235,7 @@ After installing, make the following configuration changes.
       - To Send: **Ctrl (Left)**
     - Click "OK", then click "Continue anyway"
 
-### 1.5.8. RStudio
+### RStudio
 
 All RStudio configuration settings are under Tools → Global Options. When you have finished changing the configuration settings, click "Apply" and then click "OK".
 
@@ -259,20 +259,20 @@ All RStudio configuration settings are under Tools → Global Options. When you 
     - Set the upper left pane to Console
     - Set the upper right pane to Source
 
-# 2. Windows configuration
+# Windows configuration
 
-## 2.1. Default Folders
+## Default Folders
 
 1.  **Documents/Installers** (copied from model workstation)
 2.  **Documents/windows-setup** (Derek will clone this from Github)
 3.  **Desktop/Workshop** (empty folder)
 
-## 2.2. Desktop
+## Desktop
 
 1.  Delete all Desktop shortcuts
 2.  Set background to **Documents/Installers/earth_vir_2016_lrg.jpg** by right-clicking on the file and selecting "Set as desktop background".
 
-## 2.3. Start Menu
+## Start Menu
 
 1.  Pin the following applications (and unpin all others)
     - Anaconda PowerShell Prompt
@@ -288,13 +288,13 @@ All RStudio configuration settings are under Tools → Global Options. When you 
 2.  Settings → Personalization → Start
     - Disable all settings
 
-## 2.4. File Explorer
+## File Explorer
 
 1.  Pin **Users/DataVisLabWest** folder to Quick Access. Then navigate to **Users/DataVisLabWest** to configure the settings below.
 2.  View
     - Select "List"
 3.  Sort
-    - Select "Type"
+    - Select "Name"
 4.  Options → General
     - Disable "Show recently used files"
     - Disable "Show frequently used folders"
@@ -304,24 +304,26 @@ All RStudio configuration settings are under Tools → Global Options. When you 
     - Disable "Hide extensions for known file types"
     - After making changes, click **Apply to folders** button
 
-## 2.5. Taskbar
+## Taskbar
 
 1.  Remove Windows Store
 2.  Remove Copilot
 3.  Remove Edge
 4.  Add Firefox
 
-## 2.6. Widgets
+## Widgets
 
 1.  Settings → Personalization → Taskbar
     - Disable "Widgets"
 
-## 2.7. Apps
+## Apps
 
 1.  Settings → Apps → Default apps → Firefox
     - Next to "Make Firefox your default browser", click **Set default**
+2.  Settings → Apps → Startup
+    - Disable "Microsoft Edge"
 
-## 2.8. Keyboard
+## Keyboard
 
 1.  Settings → Time & language → Language & region
     1.  Next to "English (United States)", click the **…** icon and select **Language Options**
@@ -333,21 +335,21 @@ All RStudio configuration settings are under Tools → Global Options. When you 
     4.  Set "Switch Keyboard Layout" to **Not Assigned**
     5.  Click **OK**, then click **OK** again
 
-## 2.9. Search
+## Search
 
 1.  Settings → Privacy & security → Search permissions
     - Under "More settings", disable "Show search highlights"
 
-## 2.10. Microsoft Edge
+## Microsoft Edge
 
-### 2.10.1. Page Settings (gear icon on page)
+### Page Settings (gear icon on page)
 
 - Disable "Show sponsored links"
 - Disable "Show content"
 - Disable "Show widgets"
 - Disable "Show feed"
 
-### 2.10.2. Settings (in Edge application menu)
+### Settings (in Edge application menu)
 
 1.  Profiles
     - Disable "Earn Microsoft Rewards"

@@ -167,7 +167,7 @@ After installing, make the following configuration changes.
     - Software Carpentry: https://libguides.ucmerced.edu/software-carpentry
     - Box: https://ucmerced.account.box.com/login
     - OneDrive: https://merced-my.sharepoint.com
-14. Show the Bookmarks Toolbar
+14. Bookmarks → Show Bookmarks Toolbar
 
 *** Jupyter Lab
 1. To run Jupyter Lab, open Anaconda PowerShell Prompt and run the following command:
@@ -267,7 +267,7 @@ Right click → Options
 2. View
    - Select "List"
 3. Sort
-   - Select "Type"
+   - Select "Name"
 4. Options → General
    - Disable "Show recently used files"
    - Disable "Show frequently used folders"
@@ -290,6 +290,8 @@ Right click → Options
 ** Apps
 1. Settings → Apps → Default apps → Firefox
    - Next to "Make Firefox your default browser", click *Set default*
+2. Settings → Apps → Startup
+   - Disable "Microsoft Edge"
 
 ** Keyboard
 1. Settings → Time & language → Language & region
