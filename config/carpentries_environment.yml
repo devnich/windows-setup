@@ -11,4 +11,3 @@ dependencies:
   - plotnine
   - plotly
   - seaborn
-  - spyder
