@@ -1,18 +1,14 @@
----
-author: Derek Devnich
-title: Configuring Windows 11 for Research Computing
----
-
 - [<span class="toc-section-number">1</span> Overview](#overview)
   - [<span class="toc-section-number">1.1</span> Location](#location)
   - [<span class="toc-section-number">1.2</span> Manifest](#manifest)
 - [<span class="toc-section-number">2</span> Post-upgrade QA](#post-upgrade-qa)
-  - [<span class="toc-section-number">2.1</span> Python](#python)
-  - [<span class="toc-section-number">2.2</span> Julia](#julia)
-  - [<span class="toc-section-number">2.3</span> R](#r)
-  - [<span class="toc-section-number">2.4</span> <span class="todo TODO">TODO</span> SQL](#sql)
-  - [<span class="toc-section-number">2.5</span> <span class="todo TODO">TODO</span> Git](#git)
-  - [<span class="toc-section-number">2.6</span> Cleanup](#cleanup)
+  - [<span class="toc-section-number">2.1</span> Update scripts](#update-scripts)
+  - [<span class="toc-section-number">2.2</span> Python](#python)
+  - [<span class="toc-section-number">2.3</span> Julia](#julia)
+  - [<span class="toc-section-number">2.4</span> R](#r)
+  - [<span class="toc-section-number">2.5</span> <span class="todo TODO">TODO</span> SQL](#sql)
+  - [<span class="toc-section-number">2.6</span> <span class="todo TODO">TODO</span> Git](#git)
+  - [<span class="toc-section-number">2.7</span> Cleanup](#cleanup)
 - [<span class="toc-section-number">3</span> Application configuration](#application-configuration)
   - [<span class="toc-section-number">3.1</span> General installation instructions](#general-installation-instructions)
   - [<span class="toc-section-number">3.2</span> Application manifest](#application-manifest)
@@ -47,6 +43,15 @@ This repository contains documentation and test scripts for the KL 336 workstati
 # Post-upgrade QA
 
 All scripts are located in \*Documents-setup
+
+## Update scripts
+
+1.  Open the pinned GitBash app.
+2.  Navigate to **Documents-setup**
+3.  Run
+    ``` bash
+    git pull
+    ```
 
 ## Python
 

@@ -18,6 +18,14 @@ This repository contains documentation and test scripts for the KL 336 workstati
 * Post-upgrade QA
 All scripts are located in *Documents\Installers\windows-setup\scripts*
 
+** Update scripts
+1. Open the pinned GitBash app.
+2. Navigate to *Documents\Installers\windows-setup*
+3. Run
+   #+begin_src bash
+   git pull
+   #+end_src
+
 ** Python
 1. Open the pinned Terminal app. This should open Windows PowerShell.
 2. Navigate to *Documents\Installers\windows-setup\scripts*
