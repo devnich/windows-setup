@@ -42,7 +42,9 @@ df <- surveys %>%
     mutate(weight_kg = weight / 1000,
            weight_lbs = weight_kg * 2.2)
 
-write.csv(df, file = paste(dir_processed, "mutated_surveys.csv", sep = "/"))
+fname = paste(dir_processed, "mutated_surveys.csv", sep = "/")
+write.csv(df, file = fname)
+print(paste("Saved output to", fname))
 
 # ----------------------------------
 # End test

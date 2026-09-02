@@ -33,7 +33,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
 ## Location
 
 1.  The canonical version lives here: <https://github.com/devnich/windows-setup>
-2.  Each workstation should have its own copy here: **Documents-setup**
+2.  Each workstation should have its own copy here: **Documents/Installers/windows-setup**
 
 ## Manifest
 
@@ -42,12 +42,15 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 # Post-upgrade QA
 
-All scripts are located in \*Documents-setup
+All scripts are located in **Documents/Installers/windows-setup/scripts**
 
 ## Update scripts
 
 1.  Open the pinned GitBash app.
-2.  Navigate to **Documents-setup**
+2.  Navigate to **Documents/Installers/windows-setup**
+    ``` bash
+    cd Documents/installers/windows-setup/
+    ```
 3.  Run
     ``` bash
     git pull
@@ -56,7 +59,10 @@ All scripts are located in \*Documents-setup
 ## Python
 
 1.  Open the pinned Terminal app. This should open Windows PowerShell.
-2.  Navigate to \*Documents-setup
+2.  Navigate to **Documents/Installers/windows-setup/scripts**
+    ``` bash
+    cd .\Documents\Installers\windows-setup\scripts\
+    ```
 3.  Test in terminal
     - Run
       ``` bash
@@ -69,11 +75,13 @@ All scripts are located in \*Documents-setup
       ```
     - Jupyter Lab should open in the browser
     - Open "labtest_python.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
+    - "Completed Python notebook test"
 
 ## Julia
 
 1.  Test in Jupyter Lab
     - In Jupyter Lab, open "labtest_julia.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
+    - "Completed Julia notebook test"
 2.  Shut down Jupyter Lab
     - Close all Jupyter Lab tabs without saving changes
     - Shut down Jupyter Lab
@@ -87,7 +95,7 @@ All scripts are located in \*Documents-setup
 ## R
 
 1.  Open the pinned RStudio app
-2.  Navigate to \*Documents-setup
+2.  Navigate to **Documents/Installers/windows-setup/scripts**
 3.  Open "labtest.R"
 
 ## <span class="todo TODO">TODO</span> SQL
