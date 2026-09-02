@@ -1,20 +1,108 @@
-- [<span class="toc-section-number">1</span> Application configuration](#application-configuration)
-  - [<span class="toc-section-number">1.1</span> General installation instructions](#general-installation-instructions)
-  - [<span class="toc-section-number">1.2</span> Update obsolete versions (summer 2025)](#update-obsolete-versions-summer-2025)
-  - [<span class="toc-section-number">1.3</span> Application manifest](#application-manifest)
-  - [<span class="toc-section-number">1.4</span> Application-specific installation instructions](#application-specific-installation-instructions)
-  - [<span class="toc-section-number">1.5</span> Application-specific configuration instructions](#application-specific-configuration-instructions)
-- [<span class="toc-section-number">2</span> Windows configuration](#windows-configuration)
-  - [<span class="toc-section-number">2.1</span> Default Folders](#default-folders)
-  - [<span class="toc-section-number">2.2</span> Desktop](#desktop)
-  - [<span class="toc-section-number">2.3</span> Start Menu](#start-menu)
-  - [<span class="toc-section-number">2.4</span> File Explorer](#file-explorer)
-  - [<span class="toc-section-number">2.5</span> Taskbar](#taskbar)
-  - [<span class="toc-section-number">2.6</span> Widgets](#widgets)
-  - [<span class="toc-section-number">2.7</span> Apps](#apps)
-  - [<span class="toc-section-number">2.8</span> Keyboard](#keyboard)
-  - [<span class="toc-section-number">2.9</span> Search](#search)
-  - [<span class="toc-section-number">2.10</span> Microsoft Edge](#microsoft-edge)
+---
+author: Derek Devnich
+title: Configuring Windows 11 for Research Computing
+---
+
+- [<span class="toc-section-number">1</span> Overview](#overview)
+  - [<span class="toc-section-number">1.1</span> Location](#location)
+  - [<span class="toc-section-number">1.2</span> Manifest](#manifest)
+- [<span class="toc-section-number">2</span> Post-upgrade QA](#post-upgrade-qa)
+  - [<span class="toc-section-number">2.1</span> Python](#python)
+  - [<span class="toc-section-number">2.2</span> Julia](#julia)
+  - [<span class="toc-section-number">2.3</span> R](#r)
+  - [<span class="toc-section-number">2.4</span> <span class="todo TODO">TODO</span> SQL](#sql)
+  - [<span class="toc-section-number">2.5</span> <span class="todo TODO">TODO</span> Git](#git)
+  - [<span class="toc-section-number">2.6</span> Cleanup](#cleanup)
+- [<span class="toc-section-number">3</span> Application configuration](#application-configuration)
+  - [<span class="toc-section-number">3.1</span> General installation instructions](#general-installation-instructions)
+  - [<span class="toc-section-number">3.2</span> Application manifest](#application-manifest)
+  - [<span class="toc-section-number">3.3</span> Application-specific installation instructions](#application-specific-installation-instructions)
+  - [<span class="toc-section-number">3.4</span> Application-specific configuration instructions](#application-specific-configuration-instructions)
+- [<span class="toc-section-number">4</span> Windows configuration](#windows-configuration)
+  - [<span class="toc-section-number">4.1</span> Default Folders](#default-folders)
+  - [<span class="toc-section-number">4.2</span> Desktop](#desktop)
+  - [<span class="toc-section-number">4.3</span> Start Menu](#start-menu)
+  - [<span class="toc-section-number">4.4</span> File Explorer](#file-explorer)
+  - [<span class="toc-section-number">4.5</span> Taskbar](#taskbar)
+  - [<span class="toc-section-number">4.6</span> Widgets](#widgets)
+  - [<span class="toc-section-number">4.7</span> Apps](#apps)
+  - [<span class="toc-section-number">4.8</span> Keyboard](#keyboard)
+  - [<span class="toc-section-number">4.9</span> Search](#search)
+  - [<span class="toc-section-number">4.10</span> Microsoft Edge](#microsoft-edge)
+
+# Overview
+
+This repository contains documentation and test scripts for the KL 336 workstations.
+
+## Location
+
+1.  The canonical version lives here: <https://github.com/devnich/windows-setup>
+2.  Each workstation should have its own copy here: **Documents-setup**
+
+## Manifest
+
+1.  Testing scripts are in **windows-setup/scripts**
+2.  Testing data are in **windows-setup/data**
+
+# Post-upgrade QA
+
+All scripts are located in \*Documents-setup
+
+## Python
+
+1.  Open the pinned Terminal app. This should open Windows PowerShell.
+2.  Navigate to \*Documents-setup
+3.  Test in terminal
+    - Run
+      ``` bash
+      python labtest.py
+      ```
+4.  Test in Jupyter Lab
+    - Run
+      ``` bash
+      jupyter lab
+      ```
+    - Jupyter Lab should open in the browser
+    - Open "labtest_python.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
+
+## Julia
+
+1.  Test in Jupyter Lab
+    - In Jupyter Lab, open "labtest_julia.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
+2.  Shut down Jupyter Lab
+    - Close all Jupyter Lab tabs without saving changes
+    - Shut down Jupyter Lab
+3.  Test in terminal
+    - Run
+      ``` bash
+      julia labtest.jl
+      ```
+4.  Exit terminal
+
+## R
+
+1.  Open the pinned RStudio app
+2.  Navigate to \*Documents-setup
+3.  Open "labtest.R"
+
+## <span class="todo TODO">TODO</span> SQL
+
+1.  DB Browser for SQLite
+
+## <span class="todo TODO">TODO</span> Git
+
+1.  GitBash
+
+## Cleanup
+
+1.  Remove credentials
+    - Open Credential Manager
+    - Select "Windows Credentials"
+    - If a Github credential exists, remove it
+2.  Reset repository (Git Bash)
+    ``` bash
+    git restore .
+    ```
 
 # Application configuration
 
@@ -29,40 +117,30 @@
 4.  If an application automatically opens after installation, check the "Application-specific configuration instructions" section to see if you need to make any changes.
 5.  Don't perform any auto-updates during installation.
 
-## Update obsolete versions (summer 2025)
-
-The following applications were installed using obsolete installers (from 2023). They should be completely un-installed and re-installed:
-
-1.  Anaconda Python
-2.  Git for Windows
-3.  R
-4.  RStudio
-5.  DB Browser for SQLite
-6.  MobaXTerm
-
 ## Application manifest
 
 Where to find the most recent version of every application.
 
-1.  Anaconda Python distribution: <https://www.anaconda.com/download/success>
+1.  (Deprecated) Anaconda Python distribution: <https://www.anaconda.com/download/success>
     - Installer located under Distribution Installers → Windows → 64-Bit Graphical Installer
-2.  Chrome: <https://www.google.com/chrome/>
-3.  DB Browser for SQLite: <https://sqlitebrowser.org/dl/>
+2.  Miniforge Python installer: <https://conda-forge.org/download/>
+3.  Chrome: <https://www.google.com/chrome/>
+4.  DB Browser for SQLite: <https://sqlitebrowser.org/dl/>
     - Choose the Standard installer for 64-bit Windows
-4.  DejaVu fonts: <https://dejavu-fonts.github.io>
-5.  Firefox: <https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/>
-6.  Git for Windows: <https://github.com/git-for-windows/git/releases/latest>
+5.  DejaVu fonts: <https://dejavu-fonts.github.io>
+6.  Firefox: <https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/>
+7.  Git for Windows: <https://github.com/git-for-windows/git/releases/latest>
     - Installer located under Assets → Git-*version-number*-64-bit.exe
-7.  Julia: <https://apps.microsoft.com/store/detail/9NJNWW8PVKMN>
-8.  Microsoft Office: <https://it.ucmerced.edu/software-list>
-9.  Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
+8.  Julia: <https://apps.microsoft.com/store/detail/9NJNWW8PVKMN>
+9.  Microsoft Office: <https://it.ucmerced.edu/software-list>
+10. Microsoft Powertoys: <https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD>
     - There is no local installer
-10. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
+11. MobaXTerm: <https://mobaxterm.mobatek.net/download-home-edition.html>
     - Choose the Installer edition
-11. Notepad++: <https://notepad-plus-plus.org/downloads/>
-12. R: <https://cran.r-project.org/bin/windows/base/>
-13. RStudio: <https://posit.co/download/rstudio-desktop/>
-14. uv: <https://docs.astral.sh/uv/getting-started/installation/>
+12. Notepad++: <https://notepad-plus-plus.org/downloads/>
+13. R: <https://cran.r-project.org/bin/windows/base/>
+14. RStudio: <https://posit.co/download/rstudio-desktop/>
+15. (On hold) uv: <https://docs.astral.sh/uv/getting-started/installation/>
     - There is no local installer
 
 ## Application-specific installation instructions
@@ -81,6 +159,38 @@ Where to find the most recent version of every application.
     conda create -n lab --clone base
     ```
 7.  When the process is complete (it will take several minutes), you may close PowerShell
+
+### Miniforge Python
+
+1.  Install info:
+    - Carpentry install instructions: <https://www.tim-dennis.com/2026-05-11-uc-lc/>
+    - Complete install instructions: <https://github.com/conda-forge/miniforge>
+    - PowerShell permissions: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies>
+2.  Do not add Miniforge to the PATH
+3.  By default, conda is only available from the Miniforge Prompt. To make it available from other terminals (including PowerShell), open Miniforge Prompt and run:
+    ``` bash
+    conda init
+    ```
+
+    This will create (or update) the profile.ps1 file in DataVisLabWest/Documents/WindowsPowerShell/
+4.  By default, the lab computers will not allow execution of PowerShell scripts, including the profile contained in profile.ps1 . To allow local script execution, open PowerShell and run:
+    ``` bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+
+    Conda should be available when you restart PowerShell.
+5.  Clone <https://github.com/devnich/windows-setup> to DataVisLabWest/Documents/Installers/
+6.  Create a new environment for Carpentry workshops
+    ``` bash
+    conda env create -f .\Documents\Installers\windows-setup\config\carpentries_environment.yml
+    ```
+7.  Configure Conda to auto-activate the carpentry environment
+    ``` bash
+    conda config --set default_activation_env carpentry
+    conda config --set auto_activate True
+    ```
+
+    Note that the configuration changes only work in PowerShell. The Miniforge Prompt will continue to start with the (base) environment.
 
 ### DB Browser for SQLite
 

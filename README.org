@@ -4,6 +4,70 @@
 #+TITLE: Configuring Windows 11 for Research Computing
 #+AUTHOR: Derek Devnich
 
+* Overview
+This repository contains documentation and test scripts for the KL 336 workstations.
+
+** Location
+1. The canonical version lives here: https://github.com/devnich/windows-setup
+2. Each workstation should have its own copy here: *Documents\Installers\windows-setup*
+
+** Manifest
+1. Testing scripts are in *windows-setup/scripts*
+2. Testing  data are in *windows-setup/data*
+
+* Post-upgrade QA
+All scripts are located in *Documents\Installers\windows-setup\scripts*
+
+** Python
+1. Open the pinned Terminal app. This should open Windows PowerShell.
+2. Navigate to *Documents\Installers\windows-setup\scripts*
+3. Test in terminal
+   - Run
+     #+begin_src bash
+     python labtest.py
+     #+end_src
+4. Test in Jupyter Lab
+   - Run
+     #+begin_src bash
+     jupyter lab
+     #+end_src
+   - Jupyter Lab should open in the browser
+   - Open "labtest_python.ipynb". In the *Kernel* menu, select "Restart Kernel and Run All Cells".
+
+** Julia
+1. Test in Jupyter Lab
+   - In  Jupyter Lab, open "labtest_julia.ipynb". In the *Kernel* menu, select "Restart Kernel and Run All Cells".
+2. Shut down Jupyter Lab
+   - Close all Jupyter Lab tabs without saving changes
+   - Shut down Jupyter Lab
+3. Test in terminal
+   - Run
+     #+begin_src bash
+     julia labtest.jl
+     #+end_src
+4. Exit terminal
+
+** R
+1. Open the pinned RStudio app
+2. Navigate to *Documents\Installers\windows-setup\scripts*
+3. Open "labtest.R"
+
+** TODO SQL
+1. DB Browser for SQLite
+
+** TODO Git
+1. GitBash
+
+** Cleanup
+1. Remove credentials
+   - Open Credential Manager
+   - Select "Windows Credentials"
+   - If a Github credential exists, remove it
+2. Reset repository (Git Bash)
+   #+begin_src bash
+   git restore .
+   #+end_src
+
 * Application configuration
 ** General installation instructions
 1. Make sure you are logged in as the DatVisLabWest user. Installing as the LibITLabWest user will break some applications.
@@ -15,7 +79,7 @@
 4. If an application automatically opens after installation, check the "Application-specific configuration instructions" section to see if you need to make any changes.
 5. Don't perform any auto-updates during installation.
 
-** Update obsolete versions (summer 2025)
+** COMMENT Update obsolete versions (summer 2025)
 The following applications were installed using obsolete installers (from 2023). They should be completely un-installed and re-installed:
 1. Anaconda Python
 2. Git for Windows
@@ -27,25 +91,26 @@ The following applications were installed using obsolete installers (from 2023).
 ** Application manifest
 Where to find the most recent version of every application.
 
-1. Anaconda Python distribution: https://www.anaconda.com/download/success
+1. (Deprecated) Anaconda Python distribution: https://www.anaconda.com/download/success
    - Installer located under Distribution Installers → Windows → 64-Bit Graphical Installer
-2. Chrome: https://www.google.com/chrome/
-3. DB Browser for SQLite: https://sqlitebrowser.org/dl/
+2. Miniforge Python installer: https://conda-forge.org/download/
+3. Chrome: https://www.google.com/chrome/
+4. DB Browser for SQLite: https://sqlitebrowser.org/dl/
    - Choose the Standard installer for 64-bit Windows
-4. DejaVu fonts: https://dejavu-fonts.github.io
-5. Firefox: https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/
-6. Git for Windows: https://github.com/git-for-windows/git/releases/latest
+5. DejaVu fonts: https://dejavu-fonts.github.io
+6. Firefox: https://www.mozilla.org/en-US/firefox/all/desktop-release/win64-msi/en-US/
+7. Git for Windows: https://github.com/git-for-windows/git/releases/latest
    - Installer located under Assets → Git-/version-number/-64-bit.exe
-7. Julia: https://apps.microsoft.com/store/detail/9NJNWW8PVKMN
-8. Microsoft Office: https://it.ucmerced.edu/software-list
-9. Microsoft Powertoys: https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD
-   - There is no local installer
-10. MobaXTerm: https://mobaxterm.mobatek.net/download-home-edition.html
+8. Julia: https://apps.microsoft.com/store/detail/9NJNWW8PVKMN
+9. Microsoft Office: https://it.ucmerced.edu/software-list
+10. Microsoft Powertoys: https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD
+    - There is no local installer
+11. MobaXTerm: https://mobaxterm.mobatek.net/download-home-edition.html
     - Choose the Installer edition
-11. Notepad++: https://notepad-plus-plus.org/downloads/
-12. R: https://cran.r-project.org/bin/windows/base/
-13. RStudio: https://posit.co/download/rstudio-desktop/
-14. uv: https://docs.astral.sh/uv/getting-started/installation/
+12. Notepad++: https://notepad-plus-plus.org/downloads/
+13. R: https://cran.r-project.org/bin/windows/base/
+14. RStudio: https://posit.co/download/rstudio-desktop/
+15. (On hold) uv: https://docs.astral.sh/uv/getting-started/installation/
     - There is no local installer
 
 ** Application-specific installation instructions
@@ -64,6 +129,37 @@ Where to find the most recent version of every application.
    #+END_SRC
 
 7. When the process is complete (it will take several minutes), you may close PowerShell
+
+*** Miniforge Python
+1. Install info:
+   - Carpentry install instructions: https://www.tim-dennis.com/2026-05-11-uc-lc/
+   - Complete install instructions: https://github.com/conda-forge/miniforge
+   - PowerShell permissions: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies
+2. Do not add Miniforge to the PATH
+3. By default, conda is only available from the Miniforge Prompt. To make it available from other terminals (including PowerShell), open Miniforge Prompt and run:
+   #+begin_src bash
+   conda init
+   #+end_src
+
+   This will create (or update) the profile.ps1 file in DataVisLabWest/Documents/WindowsPowerShell/
+4. By default, the lab computers will not allow execution of PowerShell scripts, including the profile contained in profile.ps1 . To allow local script execution, open PowerShell and run:
+   #+begin_src bash
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   #+end_src
+
+   Conda should be available when you restart PowerShell.
+5. Clone https://github.com/devnich/windows-setup to DataVisLabWest/Documents/Installers/
+6. Create a new environment for Carpentry workshops
+   #+begin_src bash
+   conda env create -f .\Documents\Installers\windows-setup\config\carpentries_environment.yml
+   #+end_src
+7. Configure Conda to auto-activate the carpentry environment
+   #+begin_src bash
+   conda config --set default_activation_env carpentry
+   conda config --set auto_activate True
+   #+end_src
+
+   Note that the configuration changes only work in PowerShell. The Miniforge Prompt will continue to start with the (base) environment.
 
 *** DB Browser for SQLite
 1. De-select the the option to create a Program Menu entry for "DB Browser (SQLCipher)".
