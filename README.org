@@ -15,8 +15,8 @@ This repository contains documentation and test scripts for the KL 336 workstati
 1. Testing scripts are in *windows-setup/scripts*
 2. Testing data are in *windows-setup/data*
 
-* Post-upgrade QA
-** Pre-test updates
+* Workstation post-upgrade QA
+** Pretest Setup
 1. Open the pinned GitBash app.
 2. Navigate to *Documents/Installers/windows-setup*
    #+begin_src bash
@@ -102,7 +102,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
 ** COMMENT Github via GitBash
 No easy way to automate the testing of Git and GitBash. Best approach is probably to pick a random computing and go through the repository push/pull sequence with Github
 
-** Post-test cleanup
+** Post-Test Cleanup
 1. Remove Github credentials
    1. Open Credential Manager
    2. Select "Windows Credentials"

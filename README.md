@@ -1,15 +1,15 @@
 - [<span class="toc-section-number">1</span> Overview](#overview)
   - [<span class="toc-section-number">1.1</span> Location](#location)
   - [<span class="toc-section-number">1.2</span> Manifest](#manifest)
-- [<span class="toc-section-number">2</span> Post-upgrade QA](#post-upgrade-qa)
-  - [<span class="toc-section-number">2.1</span> Pre-test updates](#pre-test-updates)
+- [<span class="toc-section-number">2</span> Workstation post-upgrade QA](#workstation-post-upgrade-qa)
+  - [<span class="toc-section-number">2.1</span> Pretest Setup](#pretest-setup)
   - [<span class="toc-section-number">2.2</span> Python (command line)](#python-command-line)
   - [<span class="toc-section-number">2.3</span> Python (Jupyter Lab)](#python-jupyter-lab)
   - [<span class="toc-section-number">2.4</span> Julia (Jupyter Lab)](#julia-jupyter-lab)
   - [<span class="toc-section-number">2.5</span> Julia (command line)](#julia-command-line)
   - [<span class="toc-section-number">2.6</span> R (RStudio)](#r-rstudio)
   - [<span class="toc-section-number">2.7</span> SQL](#sql)
-  - [<span class="toc-section-number">2.8</span> Post-test cleanup](#post-test-cleanup)
+  - [<span class="toc-section-number">2.8</span> Post-Test Cleanup](#post-test-cleanup)
 - [<span class="toc-section-number">3</span> Application configuration](#application-configuration)
   - [<span class="toc-section-number">3.1</span> General installation instructions](#general-installation-instructions)
   - [<span class="toc-section-number">3.2</span> Application manifest](#application-manifest)
@@ -42,9 +42,9 @@ This repository contains documentation and test scripts for the KL 336 workstati
 1.  Testing scripts are in **windows-setup/scripts**
 2.  Testing data are in **windows-setup/data**
 
-# Post-upgrade QA
+# Workstation post-upgrade QA
 
-## Pre-test updates
+## Pretest Setup
 
 1.  Open the pinned GitBash app.
 2.  Navigate to **Documents/Installers/windows-setup**
@@ -141,7 +141,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
     2.  In the toolbar, click "Refresh"
     3.  "summer_2000" appears in the Views section
 
-## Post-test cleanup
+## Post-Test Cleanup
 
 1.  Remove Github credentials
     1.  Open Credential Manager
