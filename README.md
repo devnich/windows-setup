@@ -2,13 +2,14 @@
   - [<span class="toc-section-number">1.1</span> Location](#location)
   - [<span class="toc-section-number">1.2</span> Manifest](#manifest)
 - [<span class="toc-section-number">2</span> Post-upgrade QA](#post-upgrade-qa)
-  - [<span class="toc-section-number">2.1</span> Update scripts](#update-scripts)
-  - [<span class="toc-section-number">2.2</span> Python](#python)
-  - [<span class="toc-section-number">2.3</span> Julia](#julia)
-  - [<span class="toc-section-number">2.4</span> R](#r)
-  - [<span class="toc-section-number">2.5</span> <span class="todo TODO">TODO</span> SQL](#sql)
-  - [<span class="toc-section-number">2.6</span> <span class="todo TODO">TODO</span> Git](#git)
-  - [<span class="toc-section-number">2.7</span> Cleanup](#cleanup)
+  - [<span class="toc-section-number">2.1</span> Pre-test updates](#pre-test-updates)
+  - [<span class="toc-section-number">2.2</span> Python (command line)](#python-command-line)
+  - [<span class="toc-section-number">2.3</span> Python (Jupyter Lab)](#python-jupyter-lab)
+  - [<span class="toc-section-number">2.4</span> Julia (Jupyter Lab)](#julia-jupyter-lab)
+  - [<span class="toc-section-number">2.5</span> Julia (command line)](#julia-command-line)
+  - [<span class="toc-section-number">2.6</span> R (RStudio)](#r-rstudio)
+  - [<span class="toc-section-number">2.7</span> SQL](#sql)
+  - [<span class="toc-section-number">2.8</span> Post-test cleanup](#post-test-cleanup)
 - [<span class="toc-section-number">3</span> Application configuration](#application-configuration)
   - [<span class="toc-section-number">3.1</span> General installation instructions](#general-installation-instructions)
   - [<span class="toc-section-number">3.2</span> Application manifest](#application-manifest)
@@ -25,6 +26,7 @@
   - [<span class="toc-section-number">4.8</span> Keyboard](#keyboard)
   - [<span class="toc-section-number">4.9</span> Search](#search)
   - [<span class="toc-section-number">4.10</span> Microsoft Edge](#microsoft-edge)
+  - [<span class="toc-section-number">4.11</span> Environment Variables](#environment-variables)
 
 # Overview
 
@@ -42,9 +44,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 # Post-upgrade QA
 
-All scripts are located in **Documents/Installers/windows-setup/scripts**
-
-## Update scripts
+## Pre-test updates
 
 1.  Open the pinned GitBash app.
 2.  Navigate to **Documents/Installers/windows-setup**
@@ -56,66 +56,108 @@ All scripts are located in **Documents/Installers/windows-setup/scripts**
     git pull
     ```
 
-## Python
+## Python (command line)
 
 1.  Open the pinned Terminal app. This should open Windows PowerShell.
 2.  Navigate to **Documents/Installers/windows-setup/scripts**
     ``` bash
     cd .\Documents\Installers\windows-setup\scripts\
     ```
-3.  Test in terminal
-    - Run
-      ``` bash
-      python labtest.py
-      ```
-4.  Test in Jupyter Lab
-    - Run
-      ``` bash
-      jupyter lab
-      ```
-    - Jupyter Lab should open in the browser
-    - Open "labtest_python.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
-    - "Completed Python notebook test"
+3.  Run
+    ``` bash
+    python labtest.py
+    ```
 
-## Julia
+### Success criteria
 
-1.  Test in Jupyter Lab
-    - In Jupyter Lab, open "labtest_julia.ipynb". In the **Kernel** menu, select "Restart Kernel and Run All Cells".
-    - "Completed Julia notebook test"
+1.  Script runs without errors
+2.  Terminal prints "Completed Python script test"
+
+## Python (Jupyter Lab)
+
+1.  In same terminal, run
+    ``` bash
+    jupyter lab
+    ```
+
+    Jupyter Lab should open in the browser
+2.  Open "labtest_python.ipynb"
+3.  In the **Kernel** menu, select "Restart Kernel and Run All Cells"
+
+### Success criteria
+
+1.  Script runs without errors
+2.  After last notebook cell, Jupyter Lab prints "Completed Python notebook test"
+
+## Julia (Jupyter Lab)
+
+1.  In currently-running Jupyter Lab, open "labtest_julia.ipynb"
+2.  In the **Kernel** menu, select "Restart Kernel and Run All Cells"
+
+### Success criteria
+
+1.  Script runs without errors
+2.  Terminal prints "Completed Julia notebook test"
+
+## Julia (command line)
+
+1.  Close all Jupyter Lab tabs without saving changes
 2.  Shut down Jupyter Lab
-    - Close all Jupyter Lab tabs without saving changes
-    - Shut down Jupyter Lab
-3.  Test in terminal
-    - Run
-      ``` bash
-      julia labtest.jl
-      ```
-4.  Exit terminal
+3.  In same terminal, run
+    ``` bash
+    julia labtest.jl
+    ```
 
-## R
+### Success criteria
+
+1.  Script runs without errors
+2.  Terminal prints "Completed Julia script test"
+
+## R (RStudio)
 
 1.  Open the pinned RStudio app
 2.  Navigate to **Documents/Installers/windows-setup/scripts**
 3.  Open "labtest.R"
+4.  Click "Source" button to run script
 
-## <span class="todo TODO">TODO</span> SQL
+### Success criteria
 
-1.  DB Browser for SQLite
+1.  Script runs without errors
+2.  R Console prints "Completed R script test"
 
-## <span class="todo TODO">TODO</span> Git
+## SQL
 
-1.  GitBash
+1.  Open pinned DBBrowser for SQLite app
+2.  Click "Open Database". Navigate to **Documents/Installers/windows-setup/data** and select "portal_mammals.sqlite".
+3.  Click "Execute SQL"
+4.  In the toolbar, click "Open SQL file(s)". Navigate to **Documents/Installers/windows-setup/scripts** and select "labtest.sql".
+5.  In the toolbar, click "Execute all"
 
-## Cleanup
+### Success criteria
 
-1.  Remove credentials
-    - Open Credential Manager
-    - Select "Windows Credentials"
-    - If a Github credential exists, remove it
-2.  Reset repository (Git Bash)
-    ``` bash
-    git restore .
-    ```
+1.  Script runs without errors
+2.  The "summer_2000" view is properly created. To verify:
+    1.  Click "Database Structure"
+    2.  In the toolbar, click "Refresh"
+    3.  "summer_2000" appears in the Views section
+
+## Post-test cleanup
+
+1.  Remove Github credentials
+    1.  Open Credential Manager
+    2.  Select "Windows Credentials"
+    3.  If a Github credential exists, remove it
+2.  Reset repository to default state
+    1.  Open the pinned GitBash app.
+    2.  Navigate to **Documents/Installers/windows-setup**
+        ``` bash
+        cd Documents/installers/windows-setup/
+        ```
+    3.  Run
+        ``` bash
+        git restore .
+        ```
+3.  Shut down all terminals
 
 # Application configuration
 
@@ -486,3 +528,7 @@ All RStudio configuration settings are under Tools → Global Options. When you 
     - Disable "Show Copilot button on the toolbar"
 6.  Languages → Writing assistance
     - Disable all settings
+
+## Environment Variables
+
+Create new Environment Variable for the DataVisLabWest user: R_USER → C:

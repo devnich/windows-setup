@@ -13,12 +13,10 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 ** Manifest
 1. Testing scripts are in *windows-setup/scripts*
-2. Testing  data are in *windows-setup/data*
+2. Testing data are in *windows-setup/data*
 
 * Post-upgrade QA
-All scripts are located in *Documents/Installers/windows-setup/scripts*
-
-** Update scripts
+** Pre-test updates
 1. Open the pinned GitBash app.
 2. Navigate to *Documents/Installers/windows-setup*
    #+begin_src bash
@@ -29,60 +27,97 @@ All scripts are located in *Documents/Installers/windows-setup/scripts*
    git pull
    #+end_src
 
-** Python
+** Python (command line)
 1. Open the pinned Terminal app. This should open Windows PowerShell.
 2. Navigate to *Documents/Installers/windows-setup/scripts*
    #+begin_src bash
    cd .\Documents\Installers\windows-setup\scripts\
    #+end_src
-3. Test in terminal
-   - Run
-     #+begin_src bash
-     python labtest.py
-     #+end_src
-4. Test in Jupyter Lab
-   - Run
-     #+begin_src bash
-     jupyter lab
-     #+end_src
-   - Jupyter Lab should open in the browser
-   - Open "labtest_python.ipynb". In the *Kernel* menu, select "Restart Kernel and Run All Cells".
-   - "Completed Python notebook test"
+3. Run
+   #+begin_src bash
+   python labtest.py
+   #+end_src
 
-** Julia
-1. Test in Jupyter Lab
-   - In  Jupyter Lab, open "labtest_julia.ipynb". In the *Kernel* menu, select "Restart Kernel and Run All Cells".
-   - "Completed Julia notebook test"
+*** Success criteria
+1. Script runs without errors
+2. Terminal prints "Completed Python script test"
+
+** Python (Jupyter Lab)
+1. In same terminal, run
+   #+begin_src bash
+   jupyter lab
+   #+end_src
+   Jupyter Lab should open in the browser
+2. Open "labtest_python.ipynb"
+3. In the *Kernel* menu, select "Restart Kernel and Run All Cells"
+
+*** Success criteria
+1. Script runs without errors
+2. After last notebook cell, Jupyter Lab prints "Completed Python notebook test"
+
+** Julia (Jupyter Lab)
+1. In currently-running Jupyter Lab, open "labtest_julia.ipynb"
+2. In the *Kernel* menu, select "Restart Kernel and Run All Cells"
+
+*** Success criteria
+1. Script runs without errors
+2. Terminal prints "Completed Julia notebook test"
+
+** Julia (command line)
+1. Close all Jupyter Lab tabs without saving changes
 2. Shut down Jupyter Lab
-   - Close all Jupyter Lab tabs without saving changes
-   - Shut down Jupyter Lab
-3. Test in terminal
-   - Run
-     #+begin_src bash
-     julia labtest.jl
-     #+end_src
-4. Exit terminal
+3. In same terminal, run
+   #+begin_src bash
+   julia labtest.jl
+   #+end_src
 
-** R
+*** Success criteria
+1. Script runs without errors
+2. Terminal prints "Completed Julia script test"
+
+** R (RStudio)
 1. Open the pinned RStudio app
 2. Navigate to *Documents/Installers/windows-setup/scripts*
 3. Open "labtest.R"
+4. Click "Source" button to run script
 
-** TODO SQL
-1. DB Browser for SQLite
+*** Success criteria
+1. Script runs without errors
+2. R Console prints "Completed R script test"
 
-** TODO Git
-1. GitBash
+** SQL
+1. Open pinned DBBrowser for SQLite app
+2. Click "Open Database". Navigate to *Documents/Installers/windows-setup/data* and select "portal_mammals.sqlite".
+3. Click "Execute SQL"
+4. In the toolbar, click "Open SQL file(s)". Navigate to *Documents/Installers/windows-setup/scripts* and select "labtest.sql".
+5. In the toolbar, click "Execute all"
 
-** Cleanup
-1. Remove credentials
-   - Open Credential Manager
-   - Select "Windows Credentials"
-   - If a Github credential exists, remove it
-2. Reset repository (Git Bash)
-   #+begin_src bash
-   git restore .
-   #+end_src
+*** Success criteria
+1. Script runs without errors
+2. The "summer_2000" view is properly created. To verify:
+   1. Click "Database Structure"
+   2. In the toolbar, click "Refresh"
+   3. "summer_2000" appears in the Views section
+
+** COMMENT Github via GitBash
+No easy way to automate the testing of Git and GitBash. Best approach is probably to pick a random computing and go through the repository push/pull sequence with Github
+
+** Post-test cleanup
+1. Remove Github credentials
+   1. Open Credential Manager
+   2. Select "Windows Credentials"
+   3. If a Github credential exists, remove it
+2. Reset repository to default state
+   1. Open the pinned GitBash app.
+   2. Navigate to *Documents/Installers/windows-setup*
+      #+begin_src bash
+      cd Documents/installers/windows-setup/
+      #+end_src
+   3. Run
+      #+begin_src bash
+      git restore .
+      #+end_src
+3. Shut down all terminals
 
 * Application configuration
 ** General installation instructions
@@ -440,6 +475,10 @@ Right click → Options
    - Disable "Show Copilot button on the toolbar"
 6. Languages → Writing assistance
    - Disable all settings
+
+** Environment Variables
+Create new Environment Variable for the DataVisLabWest user:
+R_USER → C:\Users\DataVisLabWest
 
 * COMMENT Reference
 This section provides a place to document supporting information and occasional tasks that aren't part of initial configuration.

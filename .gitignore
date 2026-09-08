@@ -1,8 +1,9 @@
 # System files
 .DS_Store
 
-# Jupyter environmental variables
-scripts/.ipynb_checkpoints/
+# Environmental variables
+.ipynb_checkpoints/
+.Rhistory
 
 # Generated and reference documentation
 docs/
