@@ -112,7 +112,7 @@ No easy way to automate the testing of Git and GitBash. Best approach is probabl
    1. Open the pinned GitBash app.
    2. Navigate to *Documents/Installers/windows-setup*
       #+begin_src bash
-      cd Documents/installers/windows-setup/
+      cd Documents/Installers/windows-setup/
       #+end_src
    3. Run
       #+begin_src bash

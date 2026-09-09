@@ -152,7 +152,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
     1.  Open the pinned GitBash app.
     2.  Navigate to **Documents/Installers/windows-setup**
         ``` bash
-        cd Documents/installers/windows-setup/
+        cd Documents/Installers/windows-setup/
         ```
     3.  Run
         ``` bash
