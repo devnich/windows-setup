@@ -4,6 +4,7 @@
 # Environmental variables
 .ipynb_checkpoints/
 .Rhistory
+.Rproj.user
 
 # Generated and reference documentation
 docs/

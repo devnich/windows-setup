@@ -49,7 +49,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
 1.  Open the pinned GitBash app.
 2.  Navigate to **Documents/Installers/windows-setup**
     ``` bash
-    cd Documents/installers/windows-setup/
+    cd Documents/Installers/windows-setup/
     ```
 3.  Run
     ``` bash
@@ -91,7 +91,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 ## Julia (Jupyter Lab)
 
-1.  In currently-running Jupyter Lab, open "labtest_julia.ipynb"
+1.  In the currently-running Jupyter Lab, open "labtest_julia.ipynb"
 2.  In the **Kernel** menu, select "Restart Kernel and Run All Cells"
 
 ### Success criteria
@@ -102,8 +102,8 @@ This repository contains documentation and test scripts for the KL 336 workstati
 ## Julia (command line)
 
 1.  Close all Jupyter Lab tabs without saving changes
-2.  Shut down Jupyter Lab
-3.  In same terminal, run
+2.  In the **File** menu, select "Shut Down"
+3.  In the currently-running PowerShell terminal, run
     ``` bash
     julia labtest.jl
     ```
@@ -116,9 +116,10 @@ This repository contains documentation and test scripts for the KL 336 workstati
 ## R (RStudio)
 
 1.  Open the pinned RStudio app
-2.  Navigate to **Documents/Installers/windows-setup/scripts**
-3.  Open "labtest.R"
-4.  Click "Source" button to run script
+2.  In the **Files** pane, navigate to **Documents/Installers/windows-setup**
+3.  Click on "windows-setup.Rproj" to set the active project.
+4.  In the **Files** pane, navigate to **scripts** and open "labtest.R"
+5.  Click "Source" button to run script
 
 ### Success criteria
 
@@ -127,9 +128,9 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 ## SQL
 
-1.  Open pinned DBBrowser for SQLite app
+1.  Open the pinned DBBrowser for SQLite app
 2.  Click "Open Database". Navigate to **Documents/Installers/windows-setup/data** and select "portal_mammals.sqlite".
-3.  Click "Execute SQL"
+3.  Select "Execute SQL" tab
 4.  In the toolbar, click "Open SQL file(s)". Navigate to **Documents/Installers/windows-setup/scripts** and select "labtest.sql".
 5.  In the toolbar, click "Execute all"
 
@@ -137,13 +138,13 @@ This repository contains documentation and test scripts for the KL 336 workstati
 
 1.  Script runs without errors
 2.  The "summer_2000" view is properly created. To verify:
-    1.  Click "Database Structure"
+    1.  Select "Database Structure" tab
     2.  In the toolbar, click "Refresh"
     3.  "summer_2000" appears in the Views section
 
 ## Post-Test Cleanup
 
-1.  Remove Github credentials
+1.  Remove Github credentials if they exist
     1.  Open Credential Manager
     2.  Select "Windows Credentials"
     3.  If a Github credential exists, remove it
@@ -158,6 +159,7 @@ This repository contains documentation and test scripts for the KL 336 workstati
         git restore .
         ```
 3.  Shut down all terminals
+4.  Exit all applications without saving changes
 
 # Application configuration
 
